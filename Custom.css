@@ -1,0 +1,75 @@
+#hero-overlay {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+}
+
+#hero-overlay::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0));
+	pointer-events: none;
+	z-index: 1;
+}
+
+#hero-overlay .section-content {
+	position: relative;
+	z-index: 2;
+}
+
+#hero-overlay .section-background img {
+	object-position: center bottom !important;
+}
+
+#the-foundation-of-my-coaching-section svg {
+	position: static !important;
+	float: none !important;
+	display: block !important;
+	height: auto !important;
+	width: clamp(56px, 8vw, 140px) !important;
+	fill: #1f4f63 !important;
+	margin: 0 0 16px 0 !important;
+}
+
+#the-foundation-of-my-coaching-section .sqs-block-code,
+#the-foundation-of-my-coaching-section .sqs-block-content {
+	line-height: normal;
+}
+
+@media (max-width: 768px) {
+	#the-foundation-of-my-coaching-section .sqs-col-4,
+	#the-foundation-of-my-coaching-section .sqs-col-6,
+	#the-foundation-of-my-coaching-section .sqs-col-12 {
+		width: 100% !important;
+	}
+
+	#the-foundation-of-my-coaching-section {
+		text-align: center;
+	}
+
+	#the-foundation-of-my-coaching-section .sqs-block {
+		align-items: center;
+	}
+
+	#the-foundation-of-my-coaching-section svg {
+		width: clamp(52px, 18vw, 110px) !important;
+		margin: 0 auto 14px auto !important;
+	}
+}
+
+#coaching-insights-section .sqs-summary-excerpt,
+#coaching-insights-section .summary-excerpt {
+	display: -webkit-box;
+	-webkit-line-clamp: 10;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+#coaching-insights-section .summary-read-more-link,
+#coaching-insights-section .sqs-summary-read-more-link {
+	color: #1470AF;
+	font-weight: 600;
+	text-decoration: none;
+}
